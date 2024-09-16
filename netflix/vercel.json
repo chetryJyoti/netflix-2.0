@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "netflix/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "netflix/build"
+        }
+      },
+      {
+        "src": "netflix/api/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "netflix/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "netflix/build/$1"
+      }
+    ],
+    "env": {
+      "MONGODB_URI": "mongodb+srv://gaurabburagohain2001:gaurab@cluster0.p4oib.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    }
+  }
+  

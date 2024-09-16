@@ -53,7 +53,7 @@ const Login = () => {
         } catch (error) {
             const errorMessage = error.response?.data?.message || 'An unexpected error occurred';
             toast.error(errorMessage);
-            console.log(error);
+            // console.log(error);
         } finally {
             dispatch(setLoading(false));
             setFullName('');
