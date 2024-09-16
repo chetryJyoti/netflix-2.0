@@ -32,6 +32,6 @@ app.use(cors(corsOptions));
 app.use("/api/v1/user", userRoute);
 app.use("/api/movies",movieRoute);
 
-app.listen(3001,() => {
+app.listen(process.env.PORT || 8080,() => {
     console.log(`Server running at port 3001`);
 });
