@@ -29,7 +29,8 @@ app.use(cookieParser());
 
 const corsOptions = {
     origin:'https://netflix-2-0-frontend.vercel.app',
-    credentials:true
+    credentials:true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }
 app.use(cors(corsOptions));
 
