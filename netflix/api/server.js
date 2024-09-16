@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:'http://localhost:3000',
+    origin:'netflix-2-0-fvdt-5000qswb3-gaurabjyoti-buragohains-projects.vercel.app',
     credentials:true,
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     withCredentials: true,
@@ -33,8 +33,10 @@ app.use(cors(corsOptions));
 app.use("/api/v1/user", userRoute);
 app.use("/api/movies",movieRoute);
 
-app.listen(3001,() => {
-    console.log(`Server running at port 3001`);
+const port = process.env.PORT || 3001;
+
+app.listen(port,() => {
+    console.log(`Server running at port ${port}`);
 });
 
 export const handler = serverless(app);
