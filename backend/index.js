@@ -19,13 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-// CORS setup
-// const corsOptions = {
-//     origin: 'https://netflix-2-0-frontend.vercel.app', // No trailing slash
-//     credentials: true,
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-// };
 
 const corsOptions = {
     origin:'https://netflix-2-0-frontend.vercel.app',
