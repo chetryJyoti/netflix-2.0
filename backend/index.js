@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:'https://netflix-2-0-frontend-i5v3.onrender.com',
+    origin:'*',
     credentials:true,
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     withCredentials: true,
