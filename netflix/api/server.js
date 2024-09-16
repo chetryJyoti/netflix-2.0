@@ -1,5 +1,4 @@
-//step-1
-// const express = require("express");
+
 import express from "express";
 import dotenv from "dotenv";
 import databaseConnection from "./utils/database.js";
@@ -21,12 +20,12 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:'netflix-2-0-fvdt-5000qswb3-gaurabjyoti-buragohains-projects.vercel.app',
-    credentials:true,
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    origin: 'https://netflix-2-0-fvdt-5000qswb3-gaurabjyoti-buragohains-projects.vercel.app/', 
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
     withCredentials: true,
     optionsSuccessStatus: 200,
-}
+};
 app.use(cors(corsOptions));
  
 // api
