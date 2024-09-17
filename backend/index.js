@@ -34,7 +34,7 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/movies", movieRoute);
 
 // Server start
-const port = 3001;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
     console.log(`Server running at port ${port}`);
 });
