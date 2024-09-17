@@ -1,4 +1,4 @@
-export const API_END_POINT = "netflix-2-0-backend-3mr8076ch-gaurabjyoti-buragohains-projects.vercel.app/api/v1/user";
+export const API_END_POINT = "http://localhost:3001/api/v1/user";
 
 export const options = {
   method: 'GET',
