@@ -21,10 +21,12 @@ app.use(cookieParser());
 
 
 const corsOptions = {
-    origin:'https://netflix-2-0-frontend.vercel.app',
-    credentials:true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}
+    origin: 'http://localhost:3000',
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],  // <-- Ensure this is correctly set
+  };
+  
+  
 app.use(cors(corsOptions));
 
 // API Routes
@@ -32,7 +34,7 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/movies", movieRoute);
 
 // Server start
-const port = process.env.PORT || 8080;
+const port = 3001;
 app.listen(port, () => {
     console.log(`Server running at port ${port}`);
 });
